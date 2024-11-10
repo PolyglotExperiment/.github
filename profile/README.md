@@ -197,7 +197,7 @@ public String getMostViewedPageByGreaterAge(int age) {
 
 Perceba que neste cenário, a partir de uma API unificada foi possível acessar dados de um mesmo domínio mesmo em bases distintas de forma verdadeiramente transparente para o desenvolvedor.
 
-## C2) Documentation prerequisites
+### C2) Documentation prerequisites
 
 Na seção C1) de exemplificação há tudo é necessário você compreender para executar as tarefas propostas neste experimento.
 
