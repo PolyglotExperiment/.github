@@ -4,11 +4,11 @@ https://docs.github.com/github/writing-on-github/getting-started-with-writing-an
 -->
 This experiment is a integral component of academic research that seeks to obtain insights on the use of a polyglot persistence API created on [Esfinge Query Builder](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md).
 
-## A) Prerequisites
+## A) Prerequisites 🌌
 - Proficiency in programming with Java 11 or higher and familiarity with annotations.
 - A knowledge of DAO and ORM design patterns is helpful.
 
-## B) Settings
+## B) Settings ⚙️
 The experiment consists of Java projects for which the volunteer must develop what is requested in each one. In this section, it is important to understand what needs to be defined in your development environment.
 The Java projects in this experiment are projects configured with Maven. This drastically reduces any incompatibility that may occur. If you already have a Java environment set up, no changes will probably be necessary.
 
@@ -25,7 +25,7 @@ The entire experiment was tested using the IDEs [Netbeans](https://netbeans.apac
 ### Firewall
 The Java projects in this experiment access the remote server mongodb.cemaden.gov.br externally on ports 5432 and 27017. If prompted, allow your IDE or Java process to also access this.
 
-## C) Background
+## C) Background 📖
 Neste experimento serão propostas tarefas em projetos Java que fazem uso do framework Esfinge Query Builder. No entanto não é necessário experiência prévia ou conhecimentos muito específicos sobre este framework. Caso deseje você pode aprender sobre este framework [clicando aqui](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md). O plano de fundo deste exeperimento está associado aos desafios da persistência poliglota em um mesmo domínio de aplicação. Desta forma para facilitar a compreensão geral sobre todo o background necessário, será exposto aqui um exemplo completo de aplicação. A ideia é mostrar tudo que é necessário você compreender para executar as tarefas que serão propostas posteriormente.
 
 ### C1) Exemplification
@@ -208,7 +208,7 @@ Revisando, foi demonstrado o básico sobre o uso de Esfinge Query Builder e como
 
 Sinta-se a vontade para rever esta documentação caso necessite ao executar as tarefas propostas no experimento.
 
-## D) Procedure <sup>(for the supervisor)</sup>
+## D) Procedure <sup>(for the supervisor)</sup>👨‍🏫
 Four tasks are provided: **Simple1A**, **Polyglot2A**, **Polyglot1B***, and **Simple2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
 
 This experiment employs a crossover methodology. To validate the methodology, the experiment must be executed as outlined below:
@@ -224,7 +224,7 @@ This experiment employs a crossover methodology. To validate the methodology, th
 
 After completing all tasks, the volunteer must respond to the questionnaire. 
 
-## E) Experiment Start 💻:
+## E) Experiment Start ⏳
 
 To access the description of each task, click below:
 
@@ -236,7 +236,7 @@ To access the description of each task, click below:
 - [**Polyglot1B**](https://github.com/PolyglotExperiment/Polyglot1B)
 - [**Simple2B**](https://github.com/PolyglotExperiment/Simple2B)
 
-## Experiment Finish ✔️:
+## Experiment Finish ☑️
 After completing the tasks, the volunteer must respond to the questionnaire available at the link. 
 
 
