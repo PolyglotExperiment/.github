@@ -28,6 +28,7 @@ The Java projects in this experiment access the remote server mongodb.cemaden.go
 ## Background
 Neste experimento serão propostas tarefas em projetos Java que fazem uso do framework Esfinge Query Builder. No entanto não é necessário experiência prévia ou conhecimentos muito específicos sobre este framework. Caso deseje você pode aprender sobre este framework [clicando aqui](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md). O plano de fundo deste exeperimento está associado aos desafios da persistência poliglota em um mesmo domínio de aplicação. Desta forma para facilitar a compreensão geral sobre todo o background necessário, será exposto aqui um exemplo completo de aplicação. A ideia é mostrar tudo que é necessário você compreender para executar as tarefas que serão propostas posteriormente.
 
+### 1) Exemplification
 Imagine que o domínio de aplicação seja de Gestão de Marketing de Site De Vendas. Suponha que você tem usuários registrados em uma base de dados relacional PostgreSQL e registros de visitas a páginas de produtos registrados em uma base NoSQL MongoDB. Considere que o usuário deu concentimento para registro de suas atividades no site. Perceba que os dados das duas bases distintas pertencem ao mesmo domínio. A ideia é conseguir correlacionar estes dados de forma a obter informações sobre, por exemplo, **Qual página é mais visualizada por usuários com mais de 30 anos?**, este conhecimento é útil para anúncios relevantes e direcionados.
 
 Consideremos que a tabela User está mapeada utilizando [JPA (Java Persistence API)](https://www.oracle.com/java/technologies/persistence-jsp.html), conforme a seguir.
@@ -92,9 +93,10 @@ VisitDAO visitDAO = QueryBuilder.create(VisitDAO.class);
 
 Considerando tudo acima, voltemos a pergunta: **Qual página é mais visualizada por usuários com mais de 30 anos?**
 
-Para responder esta pergunta vamos levar em consideração um ponto em comum que servirá como chave entre as bases. Sob a perspectiva da metodologia DDD, definimos User como a entidade primária e Visit como um ValueObject. De forma simplificada, no exemplo aqui demostrando o campo client de Visit possui o valor do campo login em User. Desta forma podemos estabelecer a correlação usando estes campos.
+Para responder esta pergunta vamos levar em consideração um ponto em comum que servirá como chave entre as bases. Sob a perspectiva da metodologia DDD, podemos definimos User como a entidade primária e Visit como um ValueObject. De forma simplificada, no exemplo aqui demostrando o campo client de Visit possui o valor do campo login em User. Desta forma podemos estabelecer a correlação usando estes campos.
 
-1) A forma **simples** de responder esta questão é criando um método na classe de controller e utilizandos os dois DAOs de forma independente conforme abaixo:
+#### 1.1) Simple (Conventional Solution)
+A forma **simples** ou convencional de responder a questão levantada é criando um método na classe de controller e utilizandos os dois DAOs de forma independente conforme abaixo:
 
 ``` Java
 
@@ -130,7 +132,40 @@ public String getMostViewedPageByGreaterAge(int age) {
 }
 ```
 
-2) Uma forma mais elaborada de responder esta questão sob a perspectiva de uma API de persistência poliglota é considerar as duas entidades como correlacionadas no mesmo domínio usando apenas o DAO da entidade primária para recuperar os dados. Para tanto, precisamos realizar algumas mudanças em nossa classe User e no nosso método getMostViewedPageByGreaterAge da classe de controller.
+#### 1.2) Polyglot Solution
+Uma forma mais elaborada de responder esta questão sob a perspectiva de uma API de persistência poliglota é considerar as duas entidades como correlacionadas no mesmo domínio usando apenas o DAO da entidade primária para recuperar os dados. Para tanto, precisamos realizar algumas mudanças em nossa classe User e no nosso método getMostViewedPageByGreaterAge da classe de controller.
+
+Na classe User usaremos algumas anotações para informar ao framework Esfinge Query Builder que estamos usando funcionalidades poliglotas.
+
+1.. alteramos a anotação @PersistenceType(value = JPA1), atualizando-o para @PersistenceType(value = JPA1, secondary = MONGODB). Isto informa ao framework que algum dos atributos da classe é mapeado para um tipo difente de base de dados, neste caso MongoDB.
+2. criamos o atributo visits, e o anotamos como @Transient do JPA para dizer que este campo não é mapeado para o tipo de persistência principal.
+3. anotamos o atributo visits com a anotação @PolyglotOneToMany(referencedEntity = User.class), indicando a classe principal como referência.
+4. anotamos o atributo visits com a anotação @PolyglotJoin(name = "client", referencedAttributeName = "login"), indicando o atributo da classe Visit como name, e em referencedAttributeName, o login como o atributo da classe referenciada em @PolyglotOneToMany.
+5. Done!
+
+Abaixo a classe completa:
+
+``` Java
+@Entity
+@PersistenceType(value = JPA1, secondary = MONGODB)
+public class User {
+    @Id
+    @GeneratedValue
+    private long id;
+    private String name;
+    private String lastName;
+    private Strig login;
+    private String password;
+    private int age;
+
+    @Transient
+    @PolyglotOneToMany(referencedEntity = User.class)
+    @PolyglotJoin(name = "client", referencedAttributeName = "login")
+    private List<Visit> visits;
+
+    // getters and setters
+}
+```
 
 ``` Java
 
@@ -162,8 +197,16 @@ public String getMostViewedPageByGreaterAge(int age) {
 
 Perceba que neste cenário, a partir de uma API unificada foi possível acessar dados de um mesmo domínio mesmo em bases distintas de forma verdadeiramente transparente para o desenvolvedor.
 
+## 2) Documentation prerequisites
 
+Na seção 1.1) de exemplificação há tudo é necessário você compreender para executar as tarefas propostas neste experimento.
 
+Revisando, foi demonstrado o básico sobre o uso de Esfinge Query Builder e como utilizar suas anotações poliglotas:
+- @PersistenceType
+- @PolyglotOneToMany
+- @PolyglotJoin
+
+Sinta-se a vontade para rever esta documentação caso necessite ao executar as tarefas propostas no experimento.
 
 ## Procedure <sup>(for the supervisor)</sup>
 Four tasks are provided: **Simple1A**, **Polyglot2A**, **Polyglot1B***, and **Simple2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
