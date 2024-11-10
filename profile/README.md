@@ -9,14 +9,14 @@ This experiment is a integral component of academic research that seeks to obta
 
 ## Background
 
-## Procedure
-Four tasks are provided: **App1**, **App1Polyglot**, **App2**, and **App2Poliglot**.
+## Procedure <sup>(for the supervisor)</sup>
+Four tasks are provided: **Simple1A**, **Simple2B**, **Polyglot1A**, and **Polyglot2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
 
 This experiment employs a crossover methodology. To validate the methodology, the experiment must be executed as outlined below:
 
 - Division of the volunteer cohort into two groups: **A** and **B**;
-- Group **A** will perform the tasks **App1** and **App2Polyglot** in that order;
-- Group **B** will perform the tasks **App1Polyglot** and **App2** in that order.
+- Group **A** will perform the tasks **Simple1A** and **Polyglot2A** in that order;
+- Group **B** will perform the tasks **Polyglot1B** and **Simple2B** in that order.
 
 > [!IMPORTANT]
 > The division into groups and the sequence of task execution is essential.
@@ -28,12 +28,12 @@ This experiment employs a crossover methodology. To validate the methodology, th
 To access the description of each task, click below:
 
 **A Group**
-- [**App1**](https://github.com/PolyglotExperiment/App1)
-- [**App2Polyglot**](https://github.com/PolyglotExperiment/App2Polyglot)
+- [**Simple1A**](https://github.com/PolyglotExperiment/Simple1A)
+- [**Polyglot2A**](https://github.com/PolyglotExperiment/Polyglot2A)
 
 **B Group**
-- [**App1Polyglot**](https://github.com/PolyglotExperiment/App1Polyglot)
-- [**App2**](https://github.com/PolyglotExperiment/App2)
+- [**Polyglot1B**](https://github.com/PolyglotExperiment/Polyglot1B)
+- [**Simple2B**](https://github.com/PolyglotExperiment/Simple2B)
 
 
 
