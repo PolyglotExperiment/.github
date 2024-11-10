@@ -208,7 +208,7 @@ Revisando, foi demonstrado o básico sobre o uso de Esfinge Query Builder e como
 
 Sinta-se a vontade para rever esta documentação caso necessite ao executar as tarefas propostas no experimento.
 
-## D) Procedure <sup>(for the supervisor)</sup>👨‍🏫
+## D) Procedure 👨‍🏫 <sup>(for the supervisor)</sup>
 Four tasks are provided: **Simple1A**, **Polyglot2A**, **Polyglot1B***, and **Simple2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
 
 This experiment employs a crossover methodology. To validate the methodology, the experiment must be executed as outlined below:
@@ -221,8 +221,8 @@ This experiment employs a crossover methodology. To validate the methodology, th
 > The division into groups and the sequence of task execution is essential.
 > 
 > Additionally, please take into account a time interval between the execution of tasks, if feasible.
-
-After completing all tasks, the volunteer must respond to the questionnaire. 
+>
+> After completing all tasks, the volunteer must respond to the questionnaire. 
 
 ## E) Experiment Start ⏳
 
@@ -237,7 +237,8 @@ To access the description of each task, click below:
 - [**Simple2B**](https://github.com/PolyglotExperiment/Simple2B)
 
 ## Experiment Finish ☑️
-After completing the tasks, the volunteer must respond to the questionnaire available at the link. 
+> [!IMPORTANT]
+> After completing the tasks, the volunteer must respond to the questionnaire available at the link. 
 
 
 
