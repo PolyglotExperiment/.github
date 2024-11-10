@@ -2,15 +2,32 @@
 <!--
 https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 -->
-This experiment is a integral component of academic research that seeks to obtain insights on the use of a polyglot persistence API created on [Esfinge Query Builder](https://esfinge.sourceforge.net/Query%20Builder.html).
+This experiment is a integral component of academic research that seeks to obtain insights on the use of a polyglot persistence API created on [Esfinge Query Builder](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md).
 
 ## Prerequisites
 - Proficiency in programming with Java 11 or higher and familiarity with annotations.
 
+## Settings
+The experiment consists of Java projects for which the volunteer must develop what is requested in each one. In this section, it is important to understand what needs to be defined in your development environment.
+The Java projects in this experiment are projects configured with Maven. This drastically reduces any incompatibility that may occur. If you already have a Java environment set up, no changes will probably be necessary.
+
+### JDK
+The Java projects in this experiment require you to have at least JDK 11 or higher installed. You can download the version specific to your operating system here [https://adoptium.net/temurin/releases/](https://adoptium.net/temurin/releases/)
+
+### IDE
+The entire experiment was tested using the IDEs [Netbeans](https://netbeans.apache.org/front/main/index.html) and [Intellij IDEA](https://www.jetbrains.com/pt-br/idea/) on the Windows 10 and 11 and Linux Ubuntu 24.04.1 LTS operating systems. Don't worry if your IDE or operating system is different. You will hardly have any problems running the projects in any IDE that supports Java development. Some IDEs that can be used:
+
+- [Netbeans](https://netbeans.apache.org/front/main/index.html) 
+- [Intellij IDEA](https://www.jetbrains.com/pt-br/idea/)
+- [Eclipse](https://eclipseide.org/)
+
+### Firewall
+The Java projects in this experiment access the remote server mongodb.cemaden.gov.br externally on ports 5432 and 27017. If prompted, allow your IDE or Java process to also access this.
+
 ## Background
 
 ## Procedure <sup>(for the supervisor)</sup>
-Four tasks are provided: **Simple1A**, **Simple2B**, **Polyglot1A**, and **Polyglot2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
+Four tasks are provided: **Simple1A**, **Polyglot2A**, **Polyglot1B***, and **Simple2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
 
 This experiment employs a crossover methodology. To validate the methodology, the experiment must be executed as outlined below:
 
