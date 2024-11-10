@@ -4,11 +4,11 @@ https://docs.github.com/github/writing-on-github/getting-started-with-writing-an
 -->
 This experiment is a integral component of academic research that seeks to obtain insights on the use of a polyglot persistence API created on [Esfinge Query Builder](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md).
 
-## Prerequisites
+## A) Prerequisites
 - Proficiency in programming with Java 11 or higher and familiarity with annotations.
 - A knowledge of DAO and ORM design patterns is helpful.
 
-## Settings
+## B) Settings
 The experiment consists of Java projects for which the volunteer must develop what is requested in each one. In this section, it is important to understand what needs to be defined in your development environment.
 The Java projects in this experiment are projects configured with Maven. This drastically reduces any incompatibility that may occur. If you already have a Java environment set up, no changes will probably be necessary.
 
@@ -25,10 +25,10 @@ The entire experiment was tested using the IDEs [Netbeans](https://netbeans.apac
 ### Firewall
 The Java projects in this experiment access the remote server mongodb.cemaden.gov.br externally on ports 5432 and 27017. If prompted, allow your IDE or Java process to also access this.
 
-## Background
+## C) Background
 Neste experimento serão propostas tarefas em projetos Java que fazem uso do framework Esfinge Query Builder. No entanto não é necessário experiência prévia ou conhecimentos muito específicos sobre este framework. Caso deseje você pode aprender sobre este framework [clicando aqui](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md). O plano de fundo deste exeperimento está associado aos desafios da persistência poliglota em um mesmo domínio de aplicação. Desta forma para facilitar a compreensão geral sobre todo o background necessário, será exposto aqui um exemplo completo de aplicação. A ideia é mostrar tudo que é necessário você compreender para executar as tarefas que serão propostas posteriormente.
 
-### 1) Exemplification
+### C1) Exemplification
 Imagine que o domínio de aplicação seja de Gestão de Marketing de Site De Vendas. Suponha que você tem usuários registrados em uma base de dados relacional PostgreSQL e registros de visitas a páginas de produtos registrados em uma base NoSQL MongoDB. Considere que o usuário deu concentimento para registro de suas atividades no site. Perceba que os dados das duas bases distintas pertencem ao mesmo domínio. A ideia é conseguir correlacionar estes dados de forma a obter informações sobre, por exemplo, **Qual página é mais visualizada por usuários com mais de 30 anos?**, este conhecimento é útil para anúncios relevantes e direcionados.
 
 Consideremos que a tabela User está mapeada utilizando [JPA (Java Persistence API)](https://www.oracle.com/java/technologies/persistence-jsp.html), conforme a seguir.
@@ -95,7 +95,7 @@ Considerando tudo acima, voltemos a pergunta: **Qual página é mais visualizada
 
 Para responder esta pergunta vamos levar em consideração um ponto em comum que servirá como chave entre as bases. Sob a perspectiva da metodologia DDD, podemos definimos User como a entidade primária e Visit como um ValueObject. De forma simplificada, no exemplo aqui demostrando o campo client de Visit possui o valor do campo login em User. Desta forma podemos estabelecer a correlação usando estes campos.
 
-#### 1.1) Simple (Conventional Solution)
+#### C1.1) Simple (Conventional Solution)
 A forma **simples** ou convencional de responder a questão levantada é criando um método na classe de controller e utilizandos os dois DAOs de forma independente conforme abaixo:
 
 ``` Java
@@ -132,7 +132,7 @@ public String getMostViewedPageByGreaterAge(int age) {
 }
 ```
 
-#### 1.2) Polyglot Solution
+#### C1.2) Polyglot Solution
 Uma forma mais elaborada de responder esta questão sob a perspectiva de uma API de persistência poliglota é considerar as duas entidades como correlacionadas no mesmo domínio usando apenas o DAO da entidade primária para recuperar os dados. Para tanto, precisamos realizar algumas mudanças em nossa classe User e no nosso método getMostViewedPageByGreaterAge da classe de controller.
 
 Na classe User usaremos algumas anotações para informar ao framework Esfinge Query Builder que estamos usando funcionalidades poliglotas.
@@ -197,9 +197,9 @@ public String getMostViewedPageByGreaterAge(int age) {
 
 Perceba que neste cenário, a partir de uma API unificada foi possível acessar dados de um mesmo domínio mesmo em bases distintas de forma verdadeiramente transparente para o desenvolvedor.
 
-## 2) Documentation prerequisites
+## C2) Documentation prerequisites
 
-Na seção 1.1) de exemplificação há tudo é necessário você compreender para executar as tarefas propostas neste experimento.
+Na seção C1) de exemplificação há tudo é necessário você compreender para executar as tarefas propostas neste experimento.
 
 Revisando, foi demonstrado o básico sobre o uso de Esfinge Query Builder e como utilizar suas anotações poliglotas:
 - @PersistenceType
@@ -208,7 +208,7 @@ Revisando, foi demonstrado o básico sobre o uso de Esfinge Query Builder e como
 
 Sinta-se a vontade para rever esta documentação caso necessite ao executar as tarefas propostas no experimento.
 
-## Procedure <sup>(for the supervisor)</sup>
+## D) Procedure <sup>(for the supervisor)</sup>
 Four tasks are provided: **Simple1A**, **Polyglot2A**, **Polyglot1B***, and **Simple2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
 
 This experiment employs a crossover methodology. To validate the methodology, the experiment must be executed as outlined below:
@@ -224,7 +224,7 @@ This experiment employs a crossover methodology. To validate the methodology, th
 
 After completing all tasks, the volunteer must respond to the questionnaire. 
 
-## Experiment Start 💻:
+## E) Experiment Start 💻:
 
 To access the description of each task, click below:
 
