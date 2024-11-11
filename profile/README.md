@@ -196,18 +196,18 @@ public String getMostViewedPageByGreaterAge(int age) {
 }
 ```
 
-Perceba que neste cenário, a partir de uma API unificada foi possível acessar dados de um mesmo domínio mesmo em bases distintas de forma verdadeiramente transparente para o desenvolvedor.
+Notice how, in this solution, a unified API allowed the developer to access data from the same domain even in multiple databases in a completely transparent manner.
 
 ### C2) Documentation prerequisites
 
-Na seção C1) de exemplificação há tudo é necessário você compreender para executar as tarefas propostas neste experimento.
+In section C1) of the example, you will learn everything needed to complete the tasks outlined in this experiment.
 
-Revisando, foi demonstrado o básico sobre o uso de Esfinge Query Builder e como utilizar suas anotações poliglotas:
+In this review, we covered the fundamentals of using Esfinge Query Builder and its polyglot annotations.
 - @PersistenceType
 - @PolyglotOneToMany
 - @PolyglotJoin
 
-Sinta-se a vontade para rever esta documentação caso necessite ao executar as tarefas propostas no experimento.
+Please review this document if necessary while carrying out the proposed tasks in the experiment.
 
 ## D) Procedure 👨‍🏫 <sup>(for the supervisor)</sup>
 Four tasks are provided: **Simple1A**, **Polyglot2A**, **Polyglot1B***, and **Simple2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
