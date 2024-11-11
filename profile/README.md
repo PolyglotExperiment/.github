@@ -6,7 +6,7 @@ This experiment is a integral component of academic research that seeks to obta
 
 ## A) Prerequisites 🌌
 - Proficiency in programming with Java 11 or higher and familiarity with annotations.
-- A knowledge of DAO and ORM design patterns is helpful.
+- Knowledge with DAO and ORM design patterns is helpful.
 
 ## B) Settings ⚙️
 The experiment consists of Java projects for which the volunteer must develop what is requested in each one. In this section, it is important to understand what needs to be defined in your development environment.
