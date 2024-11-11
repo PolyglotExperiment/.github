@@ -239,7 +239,7 @@ To access the description of each task, click below:
 
 ## Experiment Finish ☑️
 > [!IMPORTANT]
-> After completing the tasks, please 🎯 **respond to the questionnaire provided at the [link](https://docs.google.com/forms/d/e/1FAIpQLScbetu677OsNevyCVWbojYlJT2RVxdi_sR7Zv2r6VkmiYetyw/viewform?usp=sf_link)**.
+> After completing the tasks, please 🎯 **complete the questions provided at the [link](https://docs.google.com/forms/d/e/1FAIpQLScbetu677OsNevyCVWbojYlJT2RVxdi_sR7Zv2r6VkmiYetyw/viewform?usp=sf_link)**.
 
 
 
