@@ -23,7 +23,7 @@ The entire experiment was tested using the IDEs [Netbeans](https://netbeans.apac
 - [Eclipse](https://eclipseide.org/)
 
 ### Firewall
-The Java projects in this experiment access the remote server _mongodb.cemaden.gov.br_ externally on ports _5432_ and _27017_. If prompted, allow your IDE or Java process to also access this.
+The Java projects in this experiment access the remote servers _mongodb.cemaden.gov.br_ externally on ports _5432_ and _27017_. If prompted, allow your IDE or Java process to also access this.
 
 ## C) Background 📖
 In this experiment, tasks will be proposed in Java projects that make use of the Esfinge Query Builder framework. However, prior experience or very specific knowledge about this framework is not required. If you wish, you can learn about this framework [by clicking here](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md). The background of this experiment is associated with the challenges of polyglot persistence in the same application domain. In this way, to facilitate the general understanding of all the necessary background, a complete application example will be presented here. The idea is to show everything you need to understand to perform the tasks that will be proposed later.
@@ -239,7 +239,7 @@ To access the description of each task, click below:
 
 ## Experiment Finish ☑️
 > [!IMPORTANT]
-> After completing the tasks, the volunteer must respond to the questionnaire available at the link. 
+> After completing the tasks, please 🎯 **respond to the questionnaire provided at the [link](https://docs.google.com/forms/d/e/1FAIpQLScbetu677OsNevyCVWbojYlJT2RVxdi_sR7Zv2r6VkmiYetyw/viewform?usp=sf_link)**.
 
 
 
