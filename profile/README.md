@@ -23,15 +23,16 @@ The entire experiment was tested using the IDEs [Netbeans](https://netbeans.apac
 - [Eclipse](https://eclipseide.org/)
 
 ### Firewall
-The Java projects in this experiment access the remote server mongodb.cemaden.gov.br externally on ports 5432 and 27017. If prompted, allow your IDE or Java process to also access this.
+The Java projects in this experiment access the remote server _mongodb.cemaden.gov.br_ externally on ports _5432_ and _27017_. If prompted, allow your IDE or Java process to also access this.
 
 ## C) Background 📖
-Neste experimento serão propostas tarefas em projetos Java que fazem uso do framework Esfinge Query Builder. No entanto não é necessário experiência prévia ou conhecimentos muito específicos sobre este framework. Caso deseje você pode aprender sobre este framework [clicando aqui](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md). O plano de fundo deste exeperimento está associado aos desafios da persistência poliglota em um mesmo domínio de aplicação. Desta forma para facilitar a compreensão geral sobre todo o background necessário, será exposto aqui um exemplo completo de aplicação. A ideia é mostrar tudo que é necessário você compreender para executar as tarefas que serão propostas posteriormente.
+In this experiment, tasks will be proposed in Java projects that make use of the Esfinge Query Builder framework. However, prior experience or very specific knowledge about this framework is not required. If you wish, you can learn about this framework [by clicking here](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md). The background of this experiment is associated with the challenges of polyglot persistence in the same application domain. In this way, to facilitate the general understanding of all the necessary background, a complete application example will be presented here. The idea is to show everything you need to understand to perform the tasks that will be proposed later.
 
 ### C1) Exemplification
-Imagine que o domínio de aplicação seja de Gestão de Marketing de Site De Vendas. Suponha que você tem usuários registrados em uma base de dados relacional PostgreSQL e registros de visitas a páginas de produtos registrados em uma base NoSQL MongoDB. Considere que o usuário deu concentimento para registro de suas atividades no site. Perceba que os dados das duas bases distintas pertencem ao mesmo domínio. A ideia é conseguir correlacionar estes dados de forma a obter informações sobre, por exemplo, **Qual página é mais visualizada por usuários com mais de 30 anos?**, este conhecimento é útil para anúncios relevantes e direcionados.
+Imagine that the application domain is Website Sales Marketing Management. Suppose you have users registered in a PostgreSQL relational database and records of visits to product pages stored in a MongoDB NoSQL database. Consider that the user has given consent for the recording of their activities on the site. Notice that the data from the two distinct databases belong to the same domain. The idea is to be able to correlate this data in order to obtain information about, for example, **Which page is most viewed by users over 30 years old?**, this knowledge is useful for relevant and targeted advertisements.
 
-Consideremos que a tabela User está mapeada utilizando [JPA (Java Persistence API)](https://www.oracle.com/java/technologies/persistence-jsp.html), conforme a seguir.
+Let's consider that the **User** table is mapped using [JPA (Java Persistence API)](https://www.oracle.com/java/technologies/persistence-jsp.html), as follows.
+
 ``` Java
 @Entity
 @PersistenceType(value = JPA1)
@@ -48,7 +49,8 @@ public class User {
 }
 ```
 
-Consideremos também que a coleção Visit está mapeada utilizando [Morphia ODM](https://www.mongodb.com/resources/languages/morphia), conforme a seguir.
+Let's also consider that the Visit collection is mapped using [Morphia ODM](https://www.mongodb.com/resources/languages/morphia), as follows.
+
 ``` Java
 @Entity
 @PersistenceType(value = MongoDB)
@@ -62,7 +64,7 @@ public class Visit {
 }
 ```
 
-Vamos inicialmente utilizar o Esfinge Query Builder para prover acesso a estas bases a partir da criação de DAOs. Esfinge Query Builder offers a solution for creating a persistence layer simply and quickly. Using the philosophy "for a good framework, the method name is enough", Query Builder uses the method names of an interface to infer the queries that need to be executed on the database. The first step is to define an interface with the method names for the queries that need to be made. Optionally, when you want CRUD operations to be available, you can extend the Repository interface.
+We will initially use the Esfinge Query Builder to provide access to these databases. Esfinge Query Builder offers a solution for creating a persistence layer simply and quickly. Using the philosophy "for a good framework, the method name is enough", Query Builder uses the method names of an interface to infer the queries that need to be executed on the database. The first step is to define an interface with the method names for the queries that need to be made. Optionally, when you want CRUD operations to be available, you can extend the Repository interface.
 
 ``` Java
 public interface UserDAO extends Repository<User> {
@@ -89,17 +91,16 @@ VisitDAO visitDAO = QueryBuilder.create(VisitDAO.class);
 ```
 
 > [!NOTE]
-> _Esfinge Query Builder é um framework extensível e pode ser aplicado a diversos tipos de banco de dados. Atualmente possui extensão para JDBC, JPA, MongoDB, Cassandra e Neo4J. Desta forma pode lidar bem com o exemplo fornecendo uma API unificada para acesso transparente a diversos tipos de bancos_.
+> Esfinge Query Builder is an extensible framework and can be applied to several types of databases. Currently, it has extensions for JDBC, JPA, MongoDB, Cassandra, and Neo4J.
 
-Considerando tudo acima, voltemos a pergunta: **Qual página é mais visualizada por usuários com mais de 30 anos?**
+Given all of this, let us return to the question: **Which page is most accessed by visitors over 30 years old?**
 
-Para responder esta pergunta vamos levar em consideração um ponto em comum que servirá como chave entre as bases. Sob a perspectiva da metodologia DDD, podemos definimos User como a entidade primária e Visit como um ValueObject. De forma simplificada, no exemplo aqui demostrando o campo client de Visit possui o valor do campo login em User. Desta forma podemos estabelecer a correlação usando estes campos.
+To address this question, we'll look at a common point that will act as a key between the bases. In line to the DDD methodology (Domain Driven Design), the primary entity is **User**, whereas **Visit** is a value object. In the example provided, the **Visit** **client field** has the value from the **User** **login field**. Using these fields, we can establish a correlation.
 
-#### C1.1) Simple (Conventional Solution)
-A forma **simples** ou convencional de responder a questão levantada é criando um método na classe de controller e utilizandos os dois DAOs de forma independente conforme abaixo:
+#### C1.1) Simple (Typical Solution)
+The **simple** or typical approach to addressing the highlighted issue is to create a method in the controller class and use the two DAOs independently as demonstrated below:
 
 ``` Java
-
 private static UserDAO userDAO;
 private static VisitDAO visitDAO;
 
@@ -112,38 +113,38 @@ public String getMostViewedPageByGreaterAge(int age) {
 
     Map<String, Integer> mostViewedPages = new HashMap();
 
-    // usar userDAO para recuperar os usuários com mais de 30 anos
+    // use userDAO to retrieve users over 30 years old
     List<User> users = userDAO.getUserByGreaterAge(30);
 
-    // iterar os usuários e para cada um recuperar user.getLogin()
+    // iterate over the users and for each one retrieve user.getLogin()
         String loginValue = user.getLogin();
 
-        // usar visitDAO para recuperar as visitas com login igual a loginValue
+        // use visitDAO to retrieve visits with client equal to loginValue
         List<Visit> visits = visitDAO.getVisitByClient(loginValue);
 
-        // iterar as visitas do usuário e para cada uma recuperar visit.getPage()
+        // iterate through the visits and for each one retrieve visit.getPage()
              String page = visit.getPage();
 
-            // adicionar page em mostViewedPages atualizando o valor de quantas vezes aparece
+            // add page to mostViewedPages updating the value of how many times it appears
             // omitted code
 
-    // retornar o page com maior valor
+    // return the page that was visited the most times from mostViewedPages
     // omitted code
 }
 ```
 
 #### C1.2) Polyglot Solution
-Uma forma mais elaborada de responder esta questão sob a perspectiva de uma API de persistência poliglota é considerar as duas entidades como correlacionadas no mesmo domínio usando apenas o DAO da entidade primária para recuperar os dados. Para tanto, precisamos realizar algumas mudanças em nossa classe User e no nosso método getMostViewedPageByGreaterAge da classe de controller.
+A more intuitive method to solve this question from the perspective of a polyglot persistence API is to look at the two entities as correlated within the same domain, retrieving data exclusively from the principal entity's DAO. To do this, we must modify our **User** class as well as the controller class's **getMostViewedPageByGreaterAge** method.
 
-Na classe User usaremos algumas anotações para informar ao framework Esfinge Query Builder que estamos usando funcionalidades poliglotas.
+In the User class, we will utilize annotations to notify the Esfinge Query Builder framework that we are employing polyglot features.
 
-1.. alteramos a anotação @PersistenceType(value = JPA1), atualizando-o para @PersistenceType(value = JPA1, secondary = MONGODB). Isto informa ao framework que algum dos atributos da classe é mapeado para um tipo difente de base de dados, neste caso MongoDB.
-2. criamos o atributo visits, e o anotamos como @Transient do JPA para dizer que este campo não é mapeado para o tipo de persistência principal.
-3. anotamos o atributo visits com a anotação @PolyglotOneToMany(referencedEntity = User.class), indicando a classe principal como referência.
-4. anotamos o atributo visits com a anotação @PolyglotJoin(name = "client", referencedAttributeName = "login"), indicando o atributo da classe Visit como name, e em referencedAttributeName, o login como o atributo da classe referenciada em @PolyglotOneToMany.
+1. We changed the annotation from **@PersistenceType(value = JPA1)** to **@PersistenceType(value = JPA1, secondary = MONGODB)**. This informs the framework that a different database type, specifically MongoDB, is associated with one of the class attributes.
+2. We create the **visits** attribute and mark it with JPA's **@Transient** to indicate it is not linked to the primary persistence type.
+3. The **visits** attribute is annotated with the **@PolyglotOneToMany(referencedEntity = User.class)** annotation, indicating the primary entity as a reference.
+4. We use the **@PolyglotJoin(name = "client", referencedAttributeName = "login")** annotation on the **visits** attribute to specify **client**  attribute from the **Visit** class as the _name_, and the **login** (class attribute from class referenced in **@PolyglotOneToMany**)  as _referencedAttributeName_.
 5. Done!
 
-Abaixo a classe completa:
+See the full class below:
 
 ``` Java
 @Entity
@@ -179,18 +180,18 @@ public String getMostViewedPageByGreaterAge(int age) {
 
     Map<String, Integer> mostViewedPages = new HashMap();
 
-    // usar userDAO para recuperar os usuários com mais de 30 anos
+    // use userDAO to retrieve users over 30 years old
     List<User> users = userDAO.getUserByGreaterAge(30);
 
-    // iterar os usuários e para cada um recuperar user.getVisits()
+    // iterate through the visits and for each one retrieve user.getVisits()
 
-        // iterar as visitas do usuário e para cada uma recuperar visit.getPage()
+        // iterate through the user's visits and for each one retrieve visit.getPage()
              String page = visit.getPage();
 
-            // adicionar page em mostViewedPages atualizando o valor de quantas vezes aparece
+            // add page to mostViewedPages updating the value of how many times it appears
             // omitted code
 
-    // retornar o page com maior valor
+    // return the page that was visited the most times from mostViewedPages
     // omitted code
 }
 ```
