@@ -195,10 +195,8 @@ public int countVisitsToPageByGreaterAge(String page, int age) {
     List<User> users = userDAO.getUserByGreaterAge(age);
     // iterate users
     for (User user : users) {
-        // retrieve visits
-        List<Visit> visits = user.getVisits();
         // iterate visits 
-        for (Visit visit : visits) {
+        for (Visit visit : user.getVisits()) {
             //checks if the visited page is equal to the "page parameter".
             if (visit.getPage().equals(page)) {
                 result++;
