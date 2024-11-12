@@ -5,7 +5,7 @@ https://docs.github.com/github/writing-on-github/getting-started-with-writing-an
 
 𝗙𝗥𝗘𝗘 𝗔𝗡𝗗 𝗖𝗟𝗔𝗥𝗜𝗙𝗜𝗘𝗗 𝗖𝗢𝗡𝗦𝗘𝗡𝗧 𝗧𝗘𝗥𝗠 (𝗙𝗖𝗖𝗧)
 
-You are being invited to participate in the research entitled  "A transparent polyglot persistence layer approach to accessing different types of databases in the same domain model _(provisory name)_".
+You are being invited to participate in the research entitled  "A transparent polyglot persistence layer approach to accessing different types of databases in the same domain model _(provisional name)_".
 
 𝗣𝗮𝗿𝘁𝗶𝗰𝗶𝗽𝗮𝘁𝗶𝗼𝗻: The experiment is divided in two parts. In the first you will be asked to accomplish two implementation tasks with [Esfinge Query Builder](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md), one using the Conventional Approach and other using the Polyglot Approach.
 The instructions for this part of the experiment can be found here in next sections.
