@@ -251,7 +251,7 @@ To access the description of each task, click below:
 - [**Conventional1**](https://github.com/PolyglotExperiment/Conventional1)
 
 ### Finish ☑️
-After completing the tasks, please 🎯 **complete the questions provided at the [https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69)**.
+After completing the tasks, please 🎯 **complete the questions provided at the** [https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69).
 
 
 
