@@ -22,11 +22,11 @@ In the second part, you will be requested to complete a questionnaire, which may
 
 𝗖𝗼𝗻𝘀𝗲𝗻𝘁 𝗥𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻: Once the questionnaire is being carried out using an electronic form, you must check the option in which you affirm that you agree with the participation of the study and make a copy of it after completing it. You can also request a copy of the document signed by the researchers.
 
-## A) Prerequisites 🌌
+## A) Prerequisites 📋
 - Proficiency in programming with Java 11 or higher and familiarity with annotations.
 - Knowledge with DAO and ORM design patterns is helpful.
 
-## B) Settings ⚙️
+## B) Settings 🛠️
 The experiment consists of Java projects for which the volunteer must develop what is requested in each one. In this section, it is important to understand what needs to be defined in your development environment.
 The Java projects in this experiment are projects configured with Maven. This drastically reduces any incompatibility that may occur. If you already have a Java environment set up, no changes will probably be necessary.
 
@@ -116,7 +116,7 @@ Given all of this, let us return to the question: **How many users over 21 visit
 To address this question, we'll look at a common point that will act as a key between the bases. In line to the DDD methodology (Domain Driven Design), the primary entity is **User**, whereas **Visit** is a value object. In the example provided, the **Visit** **client field** has the value from the **User** **login field**. Using these fields, we can establish a correlation.
 
 #### C1.1) Conventional Approach
-The **conventional approach** to addressing the highlighted issue is to create a method in the controller class and use the two DAOs independently as demonstrated below:
+The **conventional approach** to addressing the highlighted issue is to create a method in the controller class and use the two DAOs independently as demonstrated below <sup>_(attention to the code comments)_</sup>:
 
 ``` Java
 private static UserDAO userDAO;
@@ -158,7 +158,7 @@ In the User class, we will utilize annotations to notify the Esfinge Query Build
 4. We use the **@PolyglotJoin(name = "client", referencedAttributeName = "login")** annotation on the **visits** attribute to specify **client**  attribute from the **Visit** class as the _name_, and the **login** (class attribute from class referenced in **@PolyglotOneToMany**)  as _referencedAttributeName_.
 5. Done!
 
-See the full class below:
+See the full class below<sup>_(attention to the code comments)_</sup>:
 
 ``` Java
 @Entity
@@ -207,52 +207,51 @@ public int countVisitsToPageByGreaterAge(String page, int age) {
 }
 ```
 
-### C2) Documentation prerequisites
+### C2) Exemplification review
 
 In subsection C1) you were introduced to everything necessary to complete the tasks described in the experiment.
 
-In this review, we covered the fundamentals of using Esfinge Query Builder and its polyglot annotations.
+**We believe that the most effective documentation for elucidating a coding approach comprises a concise description and a code example.**
+
+We covered the fundamentals of using Esfinge Query Builder and its polyglot annotations:
 - @PersistenceType
 - @PolyglotOneToMany
 - @PolyglotJoin
 
-Please review this subsection if necessary while carrying out the proposed tasks in the experiment.
-
-<!--
-## D) Procedure 👨‍🏫 <sup>(for the supervisor)</sup>
-Four tasks are provided: **Simple1A**, **Polyglot2A**, **Polyglot1B***, and **Simple2B**. It involves domains: 1 and 2, with the application of two techniques: simple and polyglot, solved by two groups: A and B.
-
-This experiment employs a crossover methodology. To validate the methodology, the experiment must be executed as outlined below:
-
-- Division of the volunteer cohort into two groups: **A** and **B**;
-- Group **A** will perform the tasks **Simple1A** and **Polyglot2A** in that order;
-- Group **B** will perform the tasks **Polyglot1B** and **Simple2B** in that order.
-
-> [!IMPORTANT]
-> The division into groups and the sequence of task execution is essential.
-> 
-> Additionally, please take into account a time interval between the execution of tasks, if feasible.
->
-> After completing all tasks, the volunteer must respond to the questionnaire. 
--->
+Please review C1) subsection if necessary while carrying out the proposed tasks in the experiment.
 
 ## D) Experiment
+
+You must complete two tasks that involve coding in both approaches presented.
+
+There are four task groups; complete each task from only one of them.
+
+Open the tasks from the defined group, understand what is asked and mark the start and end time of your coding for each one.
+
+A detailed description of each task is provided below.
 
 ### Start ⏳
 
 To access the description of each task, click below:
 
-**A Group**
-- [**Simple1A**](https://github.com/PolyglotExperiment/Simple1A)
-- [**Polyglot2A**](https://github.com/PolyglotExperiment/Polyglot2A)
+**Group A**
+- [**Conventional1**](https://github.com/PolyglotExperiment/Conventional1)
+- [**Polyglot2**](https://github.com/PolyglotExperiment/Polyglot2)
 
-**B Group**
-- [**Polyglot1B**](https://github.com/PolyglotExperiment/Polyglot1B)
-- [**Simple2B**](https://github.com/PolyglotExperiment/Simple2B)
+**Group B**
+- [**Conventional2**](https://github.com/PolyglotExperiment/Conventional2)
+- [**Polyglot1**](https://github.com/PolyglotExperiment/Polyglot1)
+
+**Group C**
+- [**Polyglot1**](https://github.com/PolyglotExperiment/Polyglot1)
+- [**Conventional2**](https://github.com/PolyglotExperiment/Conventional2)
+
+**Group D**
+- [**Polyglot2**](https://github.com/PolyglotExperiment/Polyglot2)
+- [**Conventional1**](https://github.com/PolyglotExperiment/Conventional1)
 
 ### Finish ☑️
-> [!IMPORTANT]
-> After completing the tasks, please 🎯 **complete the questions provided at the [https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69)**.
+After completing the tasks, please 🎯 **complete the questions provided at the [https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69)**.
 
 
 
