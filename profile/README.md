@@ -143,7 +143,7 @@ public int countVisitsToPageByGreaterAge(String page, int age) {
             }
         }
     }
-     return result;
+    return result;
 }
 ```
 
