@@ -2,7 +2,25 @@
 <!--
 https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 -->
-This experiment is a integral component of academic research that seeks to obtain insights on the use of a polyglot persistence API created on [Esfinge Query Builder](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md).
+
+𝗙𝗥𝗘𝗘 𝗔𝗡𝗗 𝗖𝗟𝗔𝗥𝗜𝗙𝗜𝗘𝗗 𝗖𝗢𝗡𝗦𝗘𝗡𝗧 𝗧𝗘𝗥𝗠 (𝗙𝗖𝗖𝗧)
+
+You are being invited to participate in the research entitled  "A transparent polyglot persistence layer approach to accessing different types of databases in the same domain model _(provisory name)_".
+
+𝗣𝗮𝗿𝘁𝗶𝗰𝗶𝗽𝗮𝘁𝗶𝗼𝗻: The experiment is divided in two parts. In the first you will be asked to accomplish two implementation tasks with [Esfinge Query Builder](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md), one using the Conventional Approach and other using the Polyglot Approach.
+The instructions for this part of the experiment can be found here in next sections.
+
+In the second part, you will be requested to complete a questionnaire, which may be found at [https://forms.gle/QwuAV6opgTsqCDK69].
+
+𝗖𝗼𝗻𝗳𝗶𝗱𝗲𝗻𝘁𝗶𝗮𝗹𝗶𝘁𝘆 𝗮𝗻𝗱 𝗮𝗻𝗼𝗻𝘆𝗺𝗶𝘁𝘆: The information in this research is strictly confidential, and disclosed only in scientific events or publications and will only be used for this purpose, with no identification of the participant(s), unless between those responsible for the study, ensuring full confidentiality about their participation.
+
+𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗶𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗼𝗿 𝘁𝗵𝗼𝘀𝗲 𝗿𝗲𝘀𝗽𝗼𝗻𝘀𝗶𝗯𝗹𝗲 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗿𝗲𝘀𝗲𝗮𝗿𝗰𝗵: During the research period, you have the right to ask any questions or ask for any other clarification, simply contacting one of the researchers by the e-mail address fernando.opc@gmail.com.
+ 
+𝗩𝗼𝗹𝘂𝗻𝘁𝗮𝗿𝘆 𝗣𝗮𝗿𝘁𝗶𝗰𝗶𝗽𝗮𝘁𝗶𝗼𝗻: You have the right to refuse to participate in the referred survey or to withdraw from this study, at any time, without prejudice or retaliation, for your voluntary decision. To quit, just leave the site before completing the survey.
+
+𝗗𝗮𝘁𝗮 𝗿𝗲𝘁𝗲𝗻𝘁𝗶𝗼𝗻: The data will be kept after the completion of the project for 5 years.
+
+𝗖𝗼𝗻𝘀𝗲𝗻𝘁 𝗥𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝘁𝗶𝗼𝗻: Once the questionnaire is being carried out using an electronic form, you must check the option in which you affirm that you agree with the participation of the study and make a copy of it after completing it. You can also request a copy of the document signed by the researchers.
 
 ## A) Prerequisites 🌌
 - Proficiency in programming with Java 11 or higher and familiarity with annotations.
@@ -26,7 +44,7 @@ The entire experiment was tested using the IDEs [Netbeans](https://netbeans.apac
 The Java projects in this experiment access the remote servers _mongodb.cemaden.gov.br_ externally on ports _5432_ and _27017_. If prompted, allow your IDE or Java process to also access this.
 
 ## C) Background 📖
-In this experiment, tasks will be proposed in Java projects that make use of the Esfinge Query Builder framework. However, prior experience or very specific knowledge about this framework is not required. If you wish, you can learn about this framework [by clicking here](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md). The background of this experiment is associated with the challenges of polyglot persistence in the same application domain. In this way, to facilitate the general understanding of all the necessary background, a complete application example will be presented here. The idea is to show everything you need to understand to perform the tasks that will be proposed later.
+In this experiment, tasks will be proposed in Java projects that make use of the [Esfinge Query Builder](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md) framework. However, prior experience or very specific knowledge about this framework is not required. If you wish, you can learn about this framework [by clicking here](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md). The background of this experiment is associated with the challenges of polyglot persistence in the same application domain. In this way, to facilitate the general understanding of all the necessary background, a complete application example will be presented here. The idea is to show everything you need to understand to perform the tasks that will be proposed later.
 
 ### C1) Exemplification
 Imagine that the application domain is Website Sales Marketing Management. Suppose you have users registered in a PostgreSQL relational database and records of visits to product pages stored in a MongoDB NoSQL database. Consider that the user has given consent for the recording of their activities on the site. Notice that the data from the two distinct databases belong to the same domain. The idea is to be able to correlate this data in order to obtain information about, for example, **Which page is most viewed by users over 30 years old?**, this knowledge is useful for relevant and targeted advertisements.
