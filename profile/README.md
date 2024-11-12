@@ -16,7 +16,7 @@ In the second part, you will be requested to complete a questionnaire, which may
 
 𝗖𝗼𝗻𝘁𝗮𝗰𝘁 𝗶𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗼𝗿 𝘁𝗵𝗼𝘀𝗲 𝗿𝗲𝘀𝗽𝗼𝗻𝘀𝗶𝗯𝗹𝗲 𝗳𝗼𝗿 𝘁𝗵𝗲 𝗿𝗲𝘀𝗲𝗮𝗿𝗰𝗵: During the research period, you have the right to ask any questions or ask for any other clarification, simply contacting one of the researchers by the e-mail address fernando.opc@gmail.com.
  
-𝗩𝗼𝗹𝘂𝗻𝘁𝗮𝗿𝘆 𝗣𝗮𝗿𝘁𝗶𝗰𝗶𝗽𝗮𝘁𝗶𝗼𝗻: You have the right to refuse to participate in the referred survey or to withdraw from this study, at any time, without prejudice or retaliation, for your voluntary decision. To quit, just leave the site before completing the survey.
+𝗩𝗼𝗹𝘂𝗻𝘁𝗮𝗿𝘆 𝗣𝗮𝗿𝘁𝗶𝗰𝗶𝗽𝗮𝘁𝗶𝗼𝗻: You have the right to refuse to participate in the referred experiment or to withdraw from this study, at any time, without prejudice or retaliation, for your voluntary decision. This experiment can be used for educational purposes as a development activity. In this scenario, sharing your data in support of research is also voluntary.
 
 𝗗𝗮𝘁𝗮 𝗿𝗲𝘁𝗲𝗻𝘁𝗶𝗼𝗻: The data will be kept after the completion of the project for 5 years.
 
