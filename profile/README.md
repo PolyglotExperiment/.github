@@ -142,8 +142,8 @@ public int countVisitsToPageByGreaterAge(String page, int age) {
                 result++;
             }
         }
-        return result;
     }
+     return result;
 }
 ```
 
@@ -202,8 +202,8 @@ public int countVisitsToPageByGreaterAge(String page, int age) {
                 result++;
             }
         }
-        return result;
     }
+    return result;
 }
 ```
 
