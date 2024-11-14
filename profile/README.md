@@ -28,7 +28,7 @@ In the second part, you will be requested to complete a questionnaire, which may
 
 ## B) Settings 🛠️
 The experiment consists of Java projects for which the volunteer must develop what is requested in each one. In this section, it is important to understand what needs to be defined in your development environment.
-The Java projects in this experiment are projects configured with Maven. This drastically reduces any incompatibility that may occur. If you already have a Java environment set up, no changes will probably be necessary.
+The Java projects in this experiment are projects configured with Maven. This drastically reduces any incompatibility that may occur. **If you already have a Java environment set up, no changes will probably be necessary**.
 
 ### JDK
 The Java projects in this experiment require you to have at least JDK 11 or higher installed. You can download the version specific to your operating system here [https://adoptium.net/temurin/releases/](https://adoptium.net/temurin/releases/)
