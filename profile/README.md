@@ -10,7 +10,7 @@ You are being invited to participate in the research entitled  "A transparent po
 𝗣𝗮𝗿𝘁𝗶𝗰𝗶𝗽𝗮𝘁𝗶𝗼𝗻: The experiment is divided in two parts. In the first you will be asked to accomplish two implementation tasks with [Esfinge Query Builder](https://github.com/EsfingeFramework/querybuilder/blob/master/documentation/README.md), one using the Conventional Approach and other using the Polyglot Approach.
 The instructions for this part of the experiment can be found here in next sections.
 
-In the second part, you will be requested to complete a questionnaire. (Send an email to fernando.opc@gmail.com to receive the form)<!--, which may be found at [https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69).-->
+In the second part, you will be requested to complete a questionnaire, which may be found at [https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69).
 
 𝗖𝗼𝗻𝗳𝗶𝗱𝗲𝗻𝘁𝗶𝗮𝗹𝗶𝘁𝘆 𝗮𝗻𝗱 𝗮𝗻𝗼𝗻𝘆𝗺𝗶𝘁𝘆: The information in this research is strictly confidential, and disclosed only in scientific events or publications and will only be used for this purpose, with no identification of the participant(s), unless between those responsible for the study, ensuring full confidentiality about their participation.
 
@@ -251,7 +251,7 @@ To access the description of each task, click below:
 - [**Conventional1**](https://github.com/PolyglotExperiment/Conventional1)
 
 ### Finish ☑️
-After completing the tasks, please 🎯 **complete the questions provided at the** **form. (Send an email to fernando.opc@gmail.com to receive the form)**<!--[https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69).-->
+After completing the tasks, please 🎯 **complete the questions provided at the** form [https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69).
 
 
 
