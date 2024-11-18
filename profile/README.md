@@ -214,9 +214,9 @@ In subsection C1) you were introduced to everything necessary to complete the ta
 **We believe that the most effective documentation for elucidating a coding approach comprises a concise description and a code example.**
 
 We covered the fundamentals of using Esfinge Query Builder and its polyglot annotations:
-- @PersistenceType
-- @PolyglotOneToMany
-- @PolyglotJoin
+- **@PersistenceType**
+- **@PolyglotOneToMany**
+- **@PolyglotJoin**
 
 Please review C1) subsection if necessary while carrying out the proposed tasks in the experiment.
 
