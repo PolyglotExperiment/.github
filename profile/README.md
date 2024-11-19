@@ -152,7 +152,7 @@ The **polyglot approach** to solve this question from the perspective of a polyg
 
 In the User class, we will utilize annotations to notify the Esfinge Query Builder framework that we are employing polyglot features.
 
-1. We changed the annotation from **@PersistenceType(value = JPA1)** to ❗ **@PersistenceType(value = JPA1, secondary = MONGODB)** ❗. This informs the framework that a different database type, specifically MongoDB, is associated with one of the class attributes.
+1. We changed the annotation from **@PersistenceType(value=JPA1)** to ❗ **@PersistenceType(value=JPA1, secondary=MONGODB)** ❗. This informs the framework that a different database type, specifically MongoDB, is associated with one of the class attributes.
 2. We create the **visits** attribute and mark it with JPA's **@Transient** to indicate it is not linked to the primary persistence type.
 3. The **visits** attribute is annotated with the **@PolyglotOneToMany(referencedEntity = User.class)** annotation, indicating the primary entity as a reference.
 4. We use the **@PolyglotJoin(name = "client", referencedAttributeName = "login")** annotation on the **visits** attribute to specify **client**  attribute from the **Visit** class as the _name_, and the **login** (class attribute from class referenced in **@PolyglotOneToMany**)  as _referencedAttributeName_.
