@@ -111,7 +111,7 @@ VisitDAO visitDAO = QueryBuilder.create(VisitDAO.class);
 > [!NOTE]
 > Esfinge Query Builder is an extensible framework and can be applied to several types of databases. Currently, it has extensions for JDBC, JPA, MongoDB, Cassandra, and Neo4J.
 
-Given all of this, let us return to the question: **How many users above the age of 21 visited the my.example.shop/games page?**
+Given all of this, let us return to the question: **How many users above the age of 21 visited the "my.example.shop/games" page?**
 
 To address this question, we'll look at a common point that will act as a key between the bases. In line to the DDD methodology (Domain Driven Design), the primary entity is **User**, whereas **Visit** is a value object. In the example provided, the **Visit** **client field** has the value from the **User** **login field**. Using these fields, we can establish a correlation.
 
