@@ -235,20 +235,20 @@ A detailed description of each task is provided below.
 To access the description of each task, click below:
 
 **Group A**
-- [**Conventional1**](https://github.com/PolyglotExperiment/Conventional1)
-- [**Polyglot2**](https://github.com/PolyglotExperiment/Polyglot2)
+- Do [**Conventional1**](https://github.com/PolyglotExperiment/Conventional1) first.
+- Then do [**Polyglot2**](https://github.com/PolyglotExperiment/Polyglot2).
 
 **Group B**
-- [**Conventional2**](https://github.com/PolyglotExperiment/Conventional2)
-- [**Polyglot1**](https://github.com/PolyglotExperiment/Polyglot1)
+- Do [**Conventional2**](https://github.com/PolyglotExperiment/Conventional2) first.
+- Then do [**Polyglot1**](https://github.com/PolyglotExperiment/Polyglot1).
 
 **Group C**
-- [**Polyglot1**](https://github.com/PolyglotExperiment/Polyglot1)
-- [**Conventional2**](https://github.com/PolyglotExperiment/Conventional2)
+- Do [**Polyglot1**](https://github.com/PolyglotExperiment/Polyglot1) first.
+- Then do [**Conventional2**](https://github.com/PolyglotExperiment/Conventional2).
 
 **Group D**
-- [**Polyglot2**](https://github.com/PolyglotExperiment/Polyglot2)
-- [**Conventional1**](https://github.com/PolyglotExperiment/Conventional1)
+- Do [**Polyglot2**](https://github.com/PolyglotExperiment/Polyglot2) first.
+- Then do [**Conventional1**](https://github.com/PolyglotExperiment/Conventional1).
 
 ### Finish ☑️
 After completing the tasks, please 🎯 **complete the questions provided at the form** [https://forms.gle/QwuAV6opgTsqCDK69](https://forms.gle/QwuAV6opgTsqCDK69).
